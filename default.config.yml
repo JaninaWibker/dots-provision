@@ -175,7 +175,3 @@ ohmyzsh_plugins:
 - fzf-zsh-plugin
 
 # need to install oh-my-zsh BEFORE cloning dotfiles (or temporarily move .oh-my-zsh(/custom) to another location)
-# conda install mamba -n base -c conda-forge
-# curl -Ls https://micro.mamba.pm/api/micromamba/osx-arm64/latest | tar -xvj bin/micromamba
-# TODO: oh-my-zsh
-# TODO: micromamba (yasin created a pr for this; idk when it's going to be available though)

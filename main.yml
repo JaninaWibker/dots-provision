@@ -21,7 +21,7 @@
       oh_my_zsh_theme: robbyrussell-modified
       oh_my_zsh_install: yes
       users:
-        - username: '{{ ansible_user }}'
+        - username: '{{ ansible_env.USER }}'
       tags: ['zsh']
   
   tasks:

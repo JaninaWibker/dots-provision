@@ -1,0 +1,181 @@
+
+# See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/dock
+dockitems_remove:
+  - Launchpad
+  - Mail
+  - FaceTime
+  - Messages
+  - Maps
+  - Photos
+  - Contacts
+  - Calendar
+  - Reminders
+  - Music
+  - Podcasts
+  - TV
+  - 'App Store'
+
+dockitems_persist:
+- name: Safari
+  path: /Applications/Safari.app
+  pos: 1
+- name: System Preferences
+  path: /System/Applications/System%20Preferences.app
+  pos: 2
+- name: Google Chrome
+  path: /Applications/Google%20Chrome.app
+  pos: 3
+- name: iTerm
+  path: /Applications/iTerm.app
+  pos: 4
+- name: Visual Studio Code
+  path: /Applications/Visual%20Studio%20Code.app
+  pos: 5
+- name: Spotify
+  path: /Applications/Spotify.app
+  pos: 6
+- name: Discord
+  path: /Applications/Discord.app
+  pos: 7
+- name: Signal
+  path: /Applications/Signal.app
+  pos: 8
+- name: Slack
+  path: /Applications/Slack.app
+  pos: 9
+
+# See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/homebrew
+homebrew_installed_packages:
+  - ansible
+  - autoconf
+  - automake
+  - coreutils
+  - cmake
+  - bash-completion
+  - git
+  - gpg
+  - httpie
+  - libevent
+  - sqlite
+  - nmap
+  - node
+  - nvm
+  - ssh-copy-id
+  - readline
+  - openssl
+  - wget
+  - curl
+  - tmux
+  - zsh
+  - vim
+  - cloc
+  - ffmpeg
+  - exiftool
+  - ncurses
+  - gcc
+  - git-delta
+  - jq
+  - dog
+  - bat
+  - lua
+  - luarocks
+  - ruby
+  - maven
+  - nano
+  - mitmproxy
+  - netcat
+  - gnuplot
+  - avrdude
+  - nim
+  - openjdk
+  - sqlite
+  - xz
+  - tree
+  - btop
+  - htop
+  - pstree
+  - woff2 # needed for dvisvgm
+  - brotli # needed for dvisvgm
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  # - kde-mac/kde
+
+homebrew_cask_apps:
+  - mambaforge
+  - micromamba
+  - docker
+  - google-chrome
+  - firefox
+  - slack
+  - discord
+  - signal
+  - visual-studio-code
+  - raycast
+  - spotify
+  - ukelele
+  - insomnia
+  - iina
+  - inkscape
+  - intellij-idea
+  - linearmouse
+  - rectangle
+  - karabiner-elements
+  # - kde-mac/kde/kdeconnect
+
+npm_packages:
+  - serve
+  - pnpm
+  - yarn
+  - npm
+  - nodemon
+
+vscode_extensions:
+  - aaron-bond.better-comments
+  - bibhasdn.unique-lines
+  - Compulim.vscode-clock
+  - Dart-Code.dart-code
+  - Dart-Code.flutter
+  - dbaeumer.vscode-eslint
+  - fallenwood.vimL
+  - jnbt.vscode-rufo
+  - jock.svg
+  - keyring.Lua
+  - kosz78.nim
+  - MarioSchwalbe.gnuplot
+  - max-SS.Cyberpunk@1.2.13
+  - mbessey.vscode-rufo
+  - mikestead.dotenv
+  - ms-azuretools.vscode-docker
+  - ms-vscode.atom-keybindings
+  - ms-vscode.cpptools
+  - ms-vsliveshare.vsliveshare
+  - rafaelmaiolla.remote-vscode
+  - rebornix.ruby
+  - rebornix.toggle
+  - redhat.java
+  - sashaweiss.block-travel
+  - shd101wyy.markdown-preview-enhanced
+  - shengchen.vscode-checkstyle
+  - silvenon.mdx
+  - slevesque.vscode-hexdump
+  - torn4dom4n.latex-support
+  - vadimcn.vscode-lldb
+  - Vallentin.vscode-bnf
+  - vscjava.vscode-java-debug
+  - vscjava.vscode-java-test
+  - wingrunr21.vscode-ruby
+  - wmaurer.change-case
+  - Yummygum.city-lights-icon-vsc
+  - yummygum.city-lights-theme
+
+ohmyzsh_plugins:
+- git
+- fzf-zsh-plugin
+
+# need to install oh-my-zsh BEFORE cloning dotfiles (or temporarily move .oh-my-zsh(/custom) to another location)
+# conda install mamba -n base -c conda-forge
+# curl -Ls https://micro.mamba.pm/api/micromamba/osx-arm64/latest | tar -xvj bin/micromamba
+# TODO: oh-my-zsh
+# TODO: micromamba (yasin created a pr for this; idk when it's going to be available though)

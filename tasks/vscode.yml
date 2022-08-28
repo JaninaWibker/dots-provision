@@ -1,0 +1,19 @@
+
+- name: Ensure settings.json symlink for vscode exists
+  file:
+    src: "{{ ansible_env.HOME }}/.config/vscode/settings.json"
+    dest: "{{ ansible_env.HOME }}/Library/Application\ Support/Code/User/settings.json"
+    state: link
+- name: Ensure keybindings.json symlink for vscode exists
+  file:
+    src: "{{ ansible_env.HOME }}/.config/vscode/keybindings.json"
+    dest: "{{ ansible_env.HOME }}/Library/Application\ Support/Code/User/keybindings.json"
+    state: link
+- name: Ensure all vscode extensions are installed
+  include_role:
+    name: gantsign.visual-studio-code-extensions
+  vars:
+    users:
+      - username: "{{ ansible_env.USER }}"
+        visual_studio_code_extensions: "{{ vscode_extensions }}"
+        visual_studio_code_extensions_absent: []

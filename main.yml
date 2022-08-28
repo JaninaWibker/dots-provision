@@ -1,0 +1,35 @@
+---
+- hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  # pre_tasks:
+  #   - name: Include playbook configuration.
+  #     include_vars: "{{ item }}"
+  #     with_fileglob:
+  #       - "{{ playbook_dir }}/config.yml"
+  #     tags: ['always']
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+    - role: geerlingguy.mac.dock
+      tags: ['dock']
+    - role: gantsign.oh-my-zsh
+      oh_my_zsh_theme: robbyrussell-modified
+      oh_my_zsh_install: yes
+      users:
+        - username: '{{ ansible_user }}'
+      tags: ['zsh']
+  
+  tasks:
+    - import_tasks: tasks/install.yml
+      tags: ['programs', 'build']
+    # - import_tasks: tasks/iterm2.yml
+    #   tags: ['iterm2', 'dotfiles']
+    - import_tasks: tasks/dotfiles.yml
+      tags: ['dotfiles']
+    - import_tasks: tasks/vscode.yml
+      tags: ['vscode', 'dotfiles']

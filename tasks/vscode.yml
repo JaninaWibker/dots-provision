@@ -1,4 +1,3 @@
-
 - name: Ensure settings.json symlink for vscode exists
   ansible.builtin.file:
     src: "{{ ansible_env.HOME }}/.config/vscode/settings.json"

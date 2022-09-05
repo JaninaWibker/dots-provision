@@ -20,8 +20,18 @@
       users:
         - username: '{{ ansible_env.USER }}'
       tags: ['zsh']
-  
+
   tasks:
+    - local_action:
+        module: command
+        cmd: 'git --git-dir="{{ playbook_dir }}/files/dots/.oh-my-zsh/custom/plugins/{{ item }}/.git" rev-parse HEAD'
+      with_items:
+        - fzf-zsh-plugin
+      register: path_thingy
+      tags: ['test']
+    - debug:
+        msg: "{{ path_thingy.results|map(attribute='stdout') }}"
+      tags: ['test']
     - import_tasks: tasks/install.yml
       tags: ['programs', 'build']
     - import_tasks: tasks/iterm2.yml

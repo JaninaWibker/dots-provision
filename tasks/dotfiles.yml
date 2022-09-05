@@ -4,4 +4,5 @@
     dest: "{{ config_home }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_group }}"
+    mode: "u=rw,g=r,o=r"
   loop: "{{ config_folder }}"

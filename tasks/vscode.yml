@@ -14,6 +14,6 @@
     name: gantsign.visual-studio-code-extensions
   vars:
     users:
-      - username: "{{ ansible_env.USER }}"
+      - username: "{{ ansible_user }}"
         visual_studio_code_extensions: "{{ vscode_extensions }}"
         visual_studio_code_extensions_absent: []

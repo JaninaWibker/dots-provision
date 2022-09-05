@@ -176,3 +176,14 @@ vscode_extensions:
 ohmyzsh_plugins:
 - git
 - fzf-zsh-plugin
+
+config_folder:
+- bat
+# - git
+# - iTerm2
+# - karabiner
+# - neofetch
+# - sqlite3
+# - tmux
+# - vim
+# - linearmouse

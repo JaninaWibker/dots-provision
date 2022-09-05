@@ -1,0 +1,7 @@
+- name: Ensure files in config_home are present
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/files/dots/.config/{{ item }}"
+    dest: "{{ config_home }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_group }}"
+  loop: "{{ config_folder }}"

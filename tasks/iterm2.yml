@@ -9,6 +9,6 @@
   community.general.osx_defaults:
     domain: com.googlecode.iterm2
     key: PrefsCustomFolder
-    value: '~/.config/iterm2'
+    value: '{{ config_home }}/iterm2'
     type: string
     state: present

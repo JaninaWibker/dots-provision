@@ -1,0 +1,3 @@
+config_home: "{{ ansible_env.XDG_CONFIG_HOME | default(ansible_env.HOME + '/.config') }}"
+ansible_user: "{{ ansible_env.USER }}"
+ansible_group: staff

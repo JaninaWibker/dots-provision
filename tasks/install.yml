@@ -1,5 +1,5 @@
 - name: Install global npm packages.
-  npm:
+  community.general.npm:
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"

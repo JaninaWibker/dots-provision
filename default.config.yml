@@ -116,7 +116,10 @@ homebrew_cask_apps:
   - spotify
   - ukelele
   - insomnia
+  - hiddenbar
+  - obs
   - iina
+  - shottr
   - inkscape
   - intellij-idea
   - linearmouse
@@ -173,5 +176,3 @@ vscode_extensions:
 ohmyzsh_plugins:
 - git
 - fzf-zsh-plugin
-
-# need to install oh-my-zsh BEFORE cloning dotfiles (or temporarily move .oh-my-zsh(/custom) to another location)

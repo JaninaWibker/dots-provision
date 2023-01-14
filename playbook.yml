@@ -14,9 +14,9 @@
         ci: "{{ ansible_env.CI is defined and ansible_env.CI == 'true' }}"
       tags: ['always']
 
-    - name: Set homebrew_installed_packages to ['zsh'] in CI
+    - name: Set homebrew_installed_packages to ['zsh', 'node'] in CI
       ansible.builtin.set_fact:
-        homebrew_installed_packages: ['zsh']
+        homebrew_installed_packages: ['zsh', 'node']
       when: ci
       tags: ['always']
 

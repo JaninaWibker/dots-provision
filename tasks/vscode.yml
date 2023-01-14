@@ -3,11 +3,13 @@
     src: "{{ ansible_env.HOME }}/.config/vscode/settings.json"
     dest: "{{ ansible_env.HOME }}/Library/Application\ Support/Code/User/settings.json"
     state: link
+  when: not ci
 - name: Ensure keybindings.json symlink for vscode exists
   ansible.builtin.file:
     src: "{{ ansible_env.HOME }}/.config/vscode/keybindings.json"
     dest: "{{ ansible_env.HOME }}/Library/Application\ Support/Code/User/keybindings.json"
     state: link
+  when: not ci
 - name: Ensure all vscode extensions are installed
   ansible.builtin.include_role:
     name: gantsign.visual-studio-code-extensions

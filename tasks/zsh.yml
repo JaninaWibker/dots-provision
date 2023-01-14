@@ -1,0 +1,15 @@
+- name: Ensure oh-my-zsh plugins are present
+  ansible.builtin.git: # noqa latest[git]
+    repo: "{{ item.repo }}"
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/{{ item.name }}"
+    depth: 1
+  with_items:
+    - { name: fzf-zsh-plugin, repo: https://github.com/unixorn/fzf-zsh-plugin.git }
+    - { name: zsh-syntax-highlighting, repo: https://github.com/zsh-users/zsh-syntax-highlighting.git }
+- name: Ensure custom zsh theme is present
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/files/dots/.oh-my-zsh/themes/robbyrussell-modified.zsh-theme"
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/themes/robbyrussell-modified.zsh-theme"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_group }}"
+    mode: "u=rw,g=r,o=r"

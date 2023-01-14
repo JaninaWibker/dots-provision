@@ -7,7 +7,7 @@
     mode: "u=rw,g=r,o=r"
   loop: "{{ config_folder }}"
 - name: Ensure oh-my-zsh plugins are present
-  ansible.builtin.git:
+  ansible.builtin.git: # noqa latest[git]
     repo: "{{ item.repo }}"
     dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/{{ item.name }}"
     depth: 1

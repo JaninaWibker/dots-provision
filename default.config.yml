@@ -50,6 +50,7 @@ dockitems_persist:
 homebrew_installed_packages:
   - act
   - ansible
+  - ansible-lint
   - autoconf
   - automake
   - coreutils

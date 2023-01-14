@@ -1,7 +1,7 @@
 - name: Install global npm packages.
-  community.general.npm:
+  community.general.npm: # noqa args[module]
     name: "{{ item.name | default(item) }}"
-    state: "{{ item.state | default('present') }}"
+    state: "{{ item.state | default('latest') }}"
     version: "{{ item.version | default(omit) }}"
     global: true
     executable: "{{ item.executable | default(omit) }}"

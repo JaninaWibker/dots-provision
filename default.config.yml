@@ -2,17 +2,19 @@
 # See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/dock
 dockitems_remove:
   - Launchpad
-  - Mail
-  - FaceTime
   - Messages
+  - Mail
   - Maps
   - Photos
-  - Contacts
+  - FaceTime
   - Calendar
+  - Contacts
   - Reminders
+  - Notes
+  - TV
   - Music
   - Podcasts
-  - TV
+  - News
   - 'App Store'
 
 dockitems_persist:
@@ -46,6 +48,7 @@ dockitems_persist:
 
 # See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/homebrew
 homebrew_installed_packages:
+  - act
   - ansible
   - autoconf
   - automake
@@ -53,13 +56,10 @@ homebrew_installed_packages:
   - cmake
   - bash-completion
   - git
-  - gpg
   - httpie
-  - libevent
-  - sqlite
   - nmap
   - node
-  - nvm
+  - node@16
   - ssh-copy-id
   - readline
   - openssl
@@ -79,8 +79,10 @@ homebrew_installed_packages:
   - bat
   - lua
   - luarocks
+  - zig
   - ruby
   - maven
+  - podman
   - nano
   - mitmproxy
   - netcat
@@ -94,17 +96,18 @@ homebrew_installed_packages:
   - btop
   - htop
   - pstree
-  - woff2 # needed for dvisvgm
-  - brotli # needed for dvisvgm
+  - sudo-touchid
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - artginzburg/tap
   # - kde-mac/kde
 
 homebrew_cask_apps:
-  - mambaforge
   - micromamba
+  - michaelvillar-timer
+  - tunnelblick
   - docker
   - google-chrome
   - firefox
@@ -122,9 +125,11 @@ homebrew_cask_apps:
   - shottr
   - inkscape
   - intellij-idea
+  - pycharm
   - linearmouse
   - rectangle
   - karabiner-elements
+  - telegram
   # - kde-mac/kde/kdeconnect
 
 npm_packages:
@@ -135,15 +140,19 @@ npm_packages:
   - nodemon
 
 vscode_extensions:
-  - aaron-bond.better-comments
-  - bibhasdn.unique-lines
-  - Compulim.vscode-clock
+  - aaron-bond.better-comments # highlights comments matching certain patterns (todo, fixme, etc.)
+  - bibhasdn.unique-lines # removes duplicate lines from selection (command)
+  - bradlc.vscode-tailwindcss # some small tailwind support
+  - Compulim.vscode-clock # clock in status bar
   - Dart-Code.dart-code
   - Dart-Code.flutter
   - dbaeumer.vscode-eslint
+  - EditorConfig.EditorConfig
   - fallenwood.vimL
+  - GitHub.copilot
   - jnbt.vscode-rufo
   - jock.svg
+  - kamikillerto.vscode-colorize # colorize hex codes
   - keyring.Lua
   - kosz78.nim
   - MarioSchwalbe.gnuplot
@@ -154,22 +163,23 @@ vscode_extensions:
   - ms-vscode.atom-keybindings
   - ms-vscode.cpptools
   - ms-vsliveshare.vsliveshare
-  - rafaelmaiolla.remote-vscode
+  - Orta.vscode-twoslash-queries # display typescript types with "// ^?"
   - rebornix.ruby
   - rebornix.toggle
   - redhat.java
+  - redhat.vscode-yaml
   - sashaweiss.block-travel
   - shd101wyy.markdown-preview-enhanced
   - shengchen.vscode-checkstyle
-  - silvenon.mdx
   - slevesque.vscode-hexdump
   - torn4dom4n.latex-support
+  - unifiedjs.vscode-mdx
   - vadimcn.vscode-lldb
   - Vallentin.vscode-bnf
   - vscjava.vscode-java-debug
   - vscjava.vscode-java-test
   - wingrunr21.vscode-ruby
-  - wmaurer.change-case
+  - wmaurer.change-case # switch selection between camelCase, snake_case, etc.
   - Yummygum.city-lights-icon-vsc
   - yummygum.city-lights-theme
 

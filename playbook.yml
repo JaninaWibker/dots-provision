@@ -23,15 +23,18 @@
       tags: ['zsh']
 
   tasks:
-    - name: Install npm packages & potentially other non-homebrew programs
-      ansible.builtin.import_tasks: tasks/install.yml
-      tags: ['programs', 'build']
     - name: Configure iTerm2
       ansible.builtin.import_tasks: tasks/iterm2.yml
       tags: ['iterm2']
+    - name: Configure vscode
+      ansible.builtin.import_tasks: tasks/vscode.yml
+      tags: ['vscode']
     - name: Add custom zsh config & other dotfiles
       ansible.builtin.import_tasks: tasks/dotfiles.yml
       tags: ['dotfiles', 'zsh']
     - name: Configure vscode
       ansible.builtin.import_tasks: tasks/vscode.yml
       tags: ['vscode']
+    - name: Install npm global packages
+      ansible.builtin.import_tasks: tasks/npm.yml
+      tags: ['npm']

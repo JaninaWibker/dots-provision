@@ -10,24 +10,24 @@
       tags: ['always']
 
     - name: Set CI flag to false initially
-      set_fact:
+      ansible.builtin.set_fact:
         ci: false
       tags: ['always']
 
     - name: Set CI flag, using this some tasks can be skipped in CI environments which don't really work there or take way too long
-      set_fact:
+      ansible.builtin.set_fact:
         ci: true
       when: ansible_env.CI is defined and ansible_env.CI == 'true'
       tags: ['always']
 
     - name: Set homebrew_installed_packages to ['zsh'] in CI
-      set_fact:
+      ansible.builtin.set_fact:
         homebrew_installed_packages: ['zsh']
       when: ci
       tags: ['always']
 
     - name: Set homebrew_cask_apps to ['visual-studio-code'] in CI
-      set_fact:
+      ansible.builtin.set_fact:
         homebrew_cask_apps: ['visual-studio-code']
       when: ci
       tags: ['always']

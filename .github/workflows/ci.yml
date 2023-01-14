@@ -17,12 +17,7 @@ jobs:
           path: "playbook.yml"
 
   integration:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os:
-          - macos-latest
-          - macos-12
+    runs-on: macos-latest
     env:
       ANSIBLE_FORCE_COLOR: '1'
 

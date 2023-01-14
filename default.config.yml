@@ -1,4 +1,3 @@
-
 # See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/dock
 dockitems_remove:
   - Launchpad
@@ -18,33 +17,33 @@ dockitems_remove:
   - 'App Store'
 
 dockitems_persist:
-- name: Safari
-  path: /Applications/Safari.app
-  pos: 1
-- name: System Preferences
-  path: /System/Applications/System%20Preferences.app
-  pos: 2
-- name: Google Chrome
-  path: /Applications/Google%20Chrome.app
-  pos: 3
-- name: iTerm
-  path: /Applications/iTerm.app
-  pos: 4
-- name: Visual Studio Code
-  path: /Applications/Visual%20Studio%20Code.app
-  pos: 5
-- name: Spotify
-  path: /Applications/Spotify.app
-  pos: 6
-- name: Discord
-  path: /Applications/Discord.app
-  pos: 7
-- name: Signal
-  path: /Applications/Signal.app
-  pos: 8
-- name: Slack
-  path: /Applications/Slack.app
-  pos: 9
+  - name: Safari
+    path: /Applications/Safari.app
+    pos: 1
+  - name: System Preferences
+    path: /System/Applications/System%20Preferences.app
+    pos: 2
+  - name: Google Chrome
+    path: /Applications/Google%20Chrome.app
+    pos: 3
+  - name: iTerm
+    path: /Applications/iTerm.app
+    pos: 4
+  - name: Visual Studio Code
+    path: /Applications/Visual%20Studio%20Code.app
+    pos: 5
+  - name: Spotify
+    path: /Applications/Spotify.app
+    pos: 6
+  - name: Discord
+    path: /Applications/Discord.app
+    pos: 7
+  - name: Signal
+    path: /Applications/Signal.app
+    pos: 8
+  - name: Slack
+    path: /Applications/Slack.app
+    pos: 9
 
 # See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/homebrew
 homebrew_installed_packages:
@@ -192,7 +191,7 @@ config_folder:
   - bat
   - vscode
   - git
-# - iTerm2
+  - iTerm2
   - karabiner
   - neofetch
   - sqlite3

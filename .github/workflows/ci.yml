@@ -20,7 +20,7 @@ jobs:
     runs-on: macos-latest
     env:
       ANSIBLE_FORCE_COLOR: '1'
-      CI: 'true'
+      CI: 'true' # this is used in the playbook to skip some tasks which unneccessarily take a long time in CI or are not supported well
 
     steps:
       - uses: actions/checkout@v2

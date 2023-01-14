@@ -9,15 +9,9 @@
         - "{{ playbook_dir }}/*.config.yml"
       tags: ['always']
 
-    - name: Set CI flag to false initially
+    - name: Set CI flag using CI env variable
       ansible.builtin.set_fact:
-        ci: false
-      tags: ['always']
-
-    - name: Set CI flag, using this some tasks can be skipped in CI environments which don't really work there or take way too long
-      ansible.builtin.set_fact:
-        ci: true
-      when: ansible_env.CI is defined and ansible_env.CI == 'true'
+        ci: "{{ ansible_env.CI is defined and ansible_env.CI == 'true' }}"
       tags: ['always']
 
     - name: Set homebrew_installed_packages to ['zsh'] in CI

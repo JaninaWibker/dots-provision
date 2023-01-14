@@ -20,6 +20,7 @@ jobs:
     runs-on: macos-latest
     env:
       ANSIBLE_FORCE_COLOR: '1'
+      CI: 'true'
 
     steps:
       - uses: actions/checkout@v2

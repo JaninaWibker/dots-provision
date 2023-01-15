@@ -26,6 +26,12 @@
       when: ci
       tags: ['always']
 
+    - name: Set vscode_extensions to [] in CI
+      ansible.builtin.set_fact:
+        vscode_extensions: []
+      when: ci
+      tags: ['always']
+
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
@@ -33,9 +39,10 @@
     - role: geerlingguy.mac.dock
       tags: ['dock']
       when: not ci
-    - role: gantsign.oh-my-zsh
+    - role: gantsign.oh-my-zsh # TODO: this overrides the mamba snippet of the .zshrc file
       oh_my_zsh_theme: robbyrussell-modified
       oh_my_zsh_install: true
+      oh_my_zsh_plugins: "{{ ohmyzsh_plugins | map(attribute='name') }}"
       users:
         - username: '{{ ansible_user }}'
       tags: ['zsh']
@@ -53,6 +60,15 @@
     - name: Configure vscode
       ansible.builtin.import_tasks: tasks/vscode.yml
       tags: ['vscode']
+    # - name: Install & build non-homebrew programs
+    #   ansible.builtin.import_tasks: tasks/programs.yml
+    #   tags: ['programs']
     - name: Install npm global packages
       ansible.builtin.import_tasks: tasks/npm.yml
       tags: ['npm']
+
+# TODO: should copy .cfg (.git) folder to home directory to allow for manual
+# TODO: pulls of submodules & dotfiles and to allow seeing changes in git status
+
+# TODO: vim
+# TODO: can keymap things be automated?

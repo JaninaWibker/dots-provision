@@ -50,53 +50,52 @@ homebrew_installed_packages:
   - act
   - ansible
   - ansible-lint
-  - autoconf
   - automake
-  - coreutils
-  - cmake
+  - avrdude
   - bash-completion
+  - bat
+  - btop
+  - cloc
+  - cmake
+  - coreutils
+  - curl
+  - dog
+  - exiftool
+  - ffmpeg
+  - gcc
   - git
+  - git-delta
+  - gnuplot
+  - htop
   - httpie
+  - jq
+  - lua@5.3
+  - luarocks
+  - maven
+  - mitmproxy
+  - nano
+  - neofetch
+  - netcat
+  - nim
   - nmap
   - node
   - node@16
-  - ssh-copy-id
-  - readline
-  - openssl
-  - wget
-  - curl
-  - tmux
-  - zsh
-  - vim
-  - cloc
-  - ffmpeg
-  - exiftool
-  - ncurses
-  - gcc
-  - git-delta
-  - jq
-  - dog
-  - bat
-  - lua
-  - luarocks
-  - zig
-  - ruby
-  - maven
-  - podman
-  - nano
-  - mitmproxy
-  - netcat
-  - gnuplot
-  - avrdude
-  - nim
   - openjdk
-  - sqlite
-  - xz
-  - tree
-  - btop
-  - htop
+  - pixi
+  - podman
   - pstree
-  - sudo-touchid
+  - ruby
+  - sqlite
+  - ssh-copy-id
+  - tmux
+  - tree
+  - vim
+  - wget
+  - xz
+  - yq
+  - yt-dlp
+  - zig
+  - zsh
 
 homebrew_taps:
   - homebrew/core
@@ -130,6 +129,7 @@ homebrew_cask_apps:
   - rectangle
   - karabiner-elements
   - telegram
+  - mactex-no-gui
   # - kde-mac/kde/kdeconnect
 
 npm_packages:
@@ -149,8 +149,11 @@ vscode_extensions:
   - dbaeumer.vscode-eslint
   - EditorConfig.EditorConfig
   - fallenwood.vimL
+  - ftsamoyed.theme-pink-cat-boo
   - GitHub.copilot
+  - github.vscode-github-actions
   - jnbt.vscode-rufo
+  - mgwg.light-pink-theme
   - jock.svg
   - kamikillerto.vscode-colorize # colorize hex codes
   - keyring.Lua
@@ -163,6 +166,7 @@ vscode_extensions:
   - ms-vscode.atom-keybindings
   - ms-vscode.cpptools
   - ms-vsliveshare.vsliveshare
+  - mvllow.rose-pine
   - Orta.vscode-twoslash-queries # display typescript types with "// ^?"
   - rebornix.ruby
   - rebornix.toggle
@@ -178,6 +182,7 @@ vscode_extensions:
   - Vallentin.vscode-bnf
   - vscjava.vscode-java-debug
   - vscjava.vscode-java-test
+  - webfreak.cute-theme
   - wingrunr21.vscode-ruby
   - wmaurer.change-case # switch selection between camelCase, snake_case, etc.
   - Yummygum.city-lights-icon-vsc

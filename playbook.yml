@@ -66,9 +66,11 @@
     - name: Install npm global packages
       ansible.builtin.import_tasks: tasks/npm.yml
       tags: ['npm']
+    - name: Install keymap
+      ansible.builtin.import_tasks: tasks/keymap.yml
+      tags: ['keymap']
 
 # TODO: should copy .cfg (.git) folder to home directory to allow for manual
 # TODO: pulls of submodules & dotfiles and to allow seeing changes in git status
 
 # TODO: vim
-# TODO: can keymap things be automated?

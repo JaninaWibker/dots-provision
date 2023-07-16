@@ -1,0 +1,9 @@
+- name: Install custom keyboard layout
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/files/dots/.config/mac-xkb-adaptation.bundle"
+    dest: "{{ ansible_user_dir }}/Library/Keyboard Layouts/mac-xkb-adaptation.bundle"
+    owner: "{{ ansible_user }}"
+    group: "staff"
+    mode: 0755
+    # you still need to select the layout in System Preferences > Keyboard > Input Sources
+    # and potentially log out and back in

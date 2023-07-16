@@ -13,7 +13,7 @@
 - name: Ensure all vscode extensions are installed
   ansible.builtin.include_role:
     name: gantsign.visual-studio-code-extensions
-  vars:
+  vars: # noqa var-naming[no-role-prefix]
     users:
       - username: "{{ ansible_user }}"
         visual_studio_code_extensions: "{{ vscode_extensions }}"

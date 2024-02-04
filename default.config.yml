@@ -55,6 +55,7 @@ homebrew_installed_packages:
   - bash-completion
   - bat
   - btop
+  - bun
   - cloc
   - cmake
   - coreutils
@@ -62,6 +63,7 @@ homebrew_installed_packages:
   - dog
   - exiftool
   - ffmpeg
+  - flyctl
   - gcc
   - git
   - git-delta
@@ -69,9 +71,11 @@ homebrew_installed_packages:
   - htop
   - httpie
   - jq
+  - just
   - lua@5.3
   - luarocks
   - maven
+  - middleclick
   - mitmproxy
   - nano
   - neofetch
@@ -84,6 +88,9 @@ homebrew_installed_packages:
   - pixi
   - podman
   - pstree
+  - qrencode
+  - rattler-build
+  - rga
   - ruby
   - sqlite
   - ssh-copy-id
@@ -101,7 +108,7 @@ homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - artginzburg/tap
-  # - kde-mac/kde
+  - oven-sh/bun
 
 homebrew_cask_apps:
   - micromamba
@@ -130,7 +137,7 @@ homebrew_cask_apps:
   - karabiner-elements
   - telegram
   - mactex-no-gui
-  # - kde-mac/kde/kdeconnect
+  - obsidian
 
 npm_packages:
   - serve
@@ -177,7 +184,7 @@ vscode_extensions:
   - shengchen.vscode-checkstyle
   - slevesque.vscode-hexdump
   - torn4dom4n.latex-support
-  - unifiedjs.vscode-mdx
+  - unifiedjs.vscode-mdx@1.2.5
   - vadimcn.vscode-lldb
   - Vallentin.vscode-bnf
   - vscjava.vscode-java-debug

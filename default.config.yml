@@ -105,8 +105,6 @@ homebrew_installed_packages:
   - zsh
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - artginzburg/tap
   - oven-sh/bun
 

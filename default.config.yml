@@ -48,6 +48,7 @@ dockitems_persist:
 # See https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/homebrew
 homebrew_installed_packages:
   - act
+  - age
   - ansible
   - ansible-lint
   - automake
@@ -60,6 +61,7 @@ homebrew_installed_packages:
   - cmake
   - coreutils
   - curl
+  - direnv
   - dog
   - exiftool
   - ffmpeg
@@ -136,6 +138,7 @@ homebrew_cask_apps:
   - telegram
   - mactex-no-gui
   - obsidian
+  - anki
 
 npm_packages:
   - serve

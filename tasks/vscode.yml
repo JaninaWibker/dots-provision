@@ -1,3 +1,7 @@
+- name: Ensure vscode config directory exists
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Library/Application\ Support/Code/User"
+    state: directory
 - name: Ensure settings.json symlink for vscode exists
   ansible.builtin.file:
     src: "{{ ansible_env.HOME }}/.config/vscode/settings.json"

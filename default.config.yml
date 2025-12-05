@@ -53,14 +53,17 @@ homebrew_installed_packages:
   - ansible-lint
   - automake
   - avrdude
+  - awscli
   - bash-completion
   - bat
   - btop
   - bun
+  - caddy
   - cloc
   - cmake
   - coreutils
   - curl
+  - deno
   - direnv
   - dog
   - exiftool
@@ -69,13 +72,13 @@ homebrew_installed_packages:
   - gcc
   - git
   - git-delta
+  - git-lfs
   - gnuplot
   - htop
   - httpie
   - jq
   - just
-  - lua@5.3
-  - luarocks
+  - languagetool
   - maven
   - middleclick
   - mitmproxy
@@ -89,15 +92,18 @@ homebrew_installed_packages:
   - openjdk
   - pixi
   - podman
+  - postgresql
   - pstree
   - qrencode
   - rattler-build
-  - rga
+  - ripgrep
+  - ripgrep-all
   - ruby
+  - rust
   - sqlite
-  - ssh-copy-id
   - tmux
   - tree
+  - typst
   - vim
   - wget
   - xz
@@ -111,34 +117,32 @@ homebrew_taps:
   - oven-sh/bun
 
 homebrew_cask_apps:
-  - micromamba
-  - michaelvillar-timer
-  - tunnelblick
-  - docker
-  - google-chrome
-  - firefox
-  - slack
-  - discord
-  - signal
-  - visual-studio-code
-  - raycast
-  - spotify
-  - ukelele
-  - insomnia
-  - hiddenbar
-  - obs
-  - iina
-  - shottr
-  - inkscape
-  - intellij-idea
-  - pycharm
-  - linearmouse
-  - rectangle
-  - karabiner-elements
-  - telegram
-  - mactex-no-gui
-  - obsidian
   - anki
+  - discord
+  - docker
+  - firefox
+  - google-chrome
+  - hiddenbar
+  - iina
+  - inkscape
+  - insomnia
+  - karabiner-elements
+  - linearmouse
+  - michaelvillar-timer
+  - notion
+  - obs
+  - obsidian
+  - orbstack
+  - raycast
+  - rectangle
+  - shottr
+  - signal
+  - slack
+  - spotify
+  - telegram
+  - tunnelblick
+  - ukelele
+  - visual-studio-code
 
 npm_packages:
   - serve
@@ -150,7 +154,9 @@ npm_packages:
 vscode_extensions:
   - aaron-bond.better-comments # highlights comments matching certain patterns (todo, fixme, etc.)
   - bibhasdn.unique-lines # removes duplicate lines from selection (command)
+  - biomejs.biome
   - bradlc.vscode-tailwindcss # some small tailwind support
+  - charliermarsh.ruff
   - Compulim.vscode-clock # clock in status bar
   - Dart-Code.dart-code
   - Dart-Code.flutter
@@ -160,21 +166,28 @@ vscode_extensions:
   - ftsamoyed.theme-pink-cat-boo
   - GitHub.copilot
   - github.vscode-github-actions
+  - github.vscode-pull-request-github
   - jnbt.vscode-rufo
-  - mgwg.light-pink-theme
   - jock.svg
   - kamikillerto.vscode-colorize # colorize hex codes
   - keyring.Lua
   - kosz78.nim
-  - MarioSchwalbe.gnuplot
+  - ltex-plus.vscode-ltex-plus
   - max-SS.Cyberpunk@1.2.13
   - mbessey.vscode-rufo
+  - mgwg.light-pink-theme
   - mikestead.dotenv
   - ms-azuretools.vscode-docker
+  - ms-python.debugpy
+  - ms-python.mypy-type-checker
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-python.vscode-python-envs
   - ms-vscode.atom-keybindings
   - ms-vscode.cpptools
   - ms-vsliveshare.vsliveshare
   - mvllow.rose-pine
+  - myriad-dreamin.tinymist
   - Orta.vscode-twoslash-queries # display typescript types with "// ^?"
   - rebornix.ruby
   - rebornix.toggle
@@ -184,6 +197,8 @@ vscode_extensions:
   - shd101wyy.markdown-preview-enhanced
   - shengchen.vscode-checkstyle
   - slevesque.vscode-hexdump
+  - tamasfe.even-better-toml
+  - tomoki1207.pdf
   - torn4dom4n.latex-support
   - unifiedjs.vscode-mdx@1.2.5
   - vadimcn.vscode-lldb
@@ -193,6 +208,7 @@ vscode_extensions:
   - webfreak.cute-theme
   - wingrunr21.vscode-ruby
   - wmaurer.change-case # switch selection between camelCase, snake_case, etc.
+  - yoavbls.pretty-ts-errors
   - Yummygum.city-lights-icon-vsc
   - yummygum.city-lights-theme
 

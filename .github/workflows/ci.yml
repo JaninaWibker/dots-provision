@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Run ansible-lint
-        uses: ansible/ansible-lint-action@v6
-        with:
-          path: "playbook.yml"
+        uses: ansible/ansible-lint@v25
 
   integration:
     runs-on: macos-latest
@@ -23,7 +21,7 @@ jobs:
       CI: 'true' # this is used in the playbook to skip some tasks which unneccessarily take a long time in CI or are not supported well
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Uninstall GitHub Actions' built-in Homebrew

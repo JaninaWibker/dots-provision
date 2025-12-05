@@ -126,6 +126,7 @@ homebrew_cask_apps:
   - iina
   - inkscape
   - insomnia
+  - iterm2
   - karabiner-elements
   - linearmouse
   - michaelvillar-timer
@@ -189,7 +190,6 @@ vscode_extensions:
   - mvllow.rose-pine
   - myriad-dreamin.tinymist
   - Orta.vscode-twoslash-queries # display typescript types with "// ^?"
-  - rebornix.ruby
   - rebornix.toggle
   - redhat.java
   - redhat.vscode-yaml
@@ -199,14 +199,12 @@ vscode_extensions:
   - slevesque.vscode-hexdump
   - tamasfe.even-better-toml
   - tomoki1207.pdf
-  - torn4dom4n.latex-support
   - unifiedjs.vscode-mdx@1.2.5
   - vadimcn.vscode-lldb
   - Vallentin.vscode-bnf
   - vscjava.vscode-java-debug
   - vscjava.vscode-java-test
   - webfreak.cute-theme
-  - wingrunr21.vscode-ruby
   - wmaurer.change-case # switch selection between camelCase, snake_case, etc.
   - yoavbls.pretty-ts-errors
   - Yummygum.city-lights-icon-vsc

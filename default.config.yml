@@ -63,9 +63,10 @@ homebrew_installed_packages:
   - cmake
   - coreutils
   - curl
+  - delta
   - deno
   - direnv
-  - dog
+  - doge
   - exiftool
   - ffmpeg
   - flyctl
@@ -88,7 +89,6 @@ homebrew_installed_packages:
   - nim
   - nmap
   - node
-  - node@16
   - openjdk
   - pixi
   - podman
@@ -119,7 +119,6 @@ homebrew_taps:
 homebrew_cask_apps:
   - anki
   - discord
-  - docker
   - firefox
   - google-chrome
   - hiddenbar
@@ -144,6 +143,7 @@ homebrew_cask_apps:
   - tunnelblick
   - ukelele
   - visual-studio-code
+  - whatsapp
 
 npm_packages:
   - serve
@@ -226,3 +226,5 @@ config_folder:
   - tmux
 # - vim
   - linearmouse
+  - mac-xkb-adaptation.bundle
+

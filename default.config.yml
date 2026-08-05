@@ -88,6 +88,7 @@ homebrew_installed_packages:
   - ripgrep
   - ripgrep-all
   - sqlite
+  - tailscale
   - tmux
   - tree
   - typst
@@ -99,12 +100,10 @@ homebrew_installed_packages:
   - zsh
   - zsh-syntax-highlighting
 
-homebrew_taps:
-  - artginzburg/tap
-
 homebrew_cask_apps:
-  - anki
+  - busycal
   - discord
+  - figma
   - firefox
   - gitbutler
   - inkscape
@@ -116,6 +115,7 @@ homebrew_cask_apps:
   - notion
   - obsidian
   - orbstack
+  - orion
   - raycast
   - rectangle
   - shottr
@@ -123,10 +123,11 @@ homebrew_cask_apps:
   - slack
   - spotify
   - telegram
-  - ungoogled-chromium
   - ukelele
+  - ungoogled-chromium
   - visual-studio-code
   - whatsapp
+
 
 npm_packages:
   - serve
